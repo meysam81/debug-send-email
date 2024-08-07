@@ -1,0 +1,23 @@
+name: ci
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - uses: licenseware/send-email-notification@v1
+        with:
+          api-key: ${{ secrets.SENDGRID_API_KEY }}
+          subject: Test Subject
+          from-email: meysam@developer-friendly.blog
+          to-email: contact@meysam.io
+          markdown-body: |
+            Hey, check out this file
+          attachments: |
+            .github/workflows/ci.yml
