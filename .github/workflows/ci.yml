@@ -20,4 +20,4 @@ jobs:
           markdown-body: |
             Hey, check out this file
           attachments: |
-            .github/workflows/ci.yml
+            index.html
