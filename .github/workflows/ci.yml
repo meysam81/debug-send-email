@@ -21,4 +21,4 @@ jobs:
             Hey, check out this file
           attachments: |
             index.html
-          attachment-disposition: inline
+          attachments-disposition: inline
